@@ -108,7 +108,7 @@ if st.session_state.calculated:
         with m3:
             st.metric("피고 경제적 이익 (z)", f"{z/100_000_000:.1f} 억 원")
         with m4:
-            st.metric("경제적 이익 비율 (z/x)", f"{ratio_zx:.1f} %")
+            st.metric("피고 경제적 이익 비율 (z/x)", f"{ratio_zx:.1f} %")
 
         if condition_met:
             st.success("성과보수 기준 충족: z/x ≥ 60%")
@@ -118,3 +118,4 @@ if st.session_state.calculated:
         st.caption(f"입력 기준 · 성과보수: {fee/100_000_000:.1f}억 원 · 인용비율: {st.session_state.ratio_y:.1f}%")
     else:
         st.warning("입력 오류: 성과보수는 5억 이하여야 하며, 인용비율은 100% 미만이어야 합니다.")
+
